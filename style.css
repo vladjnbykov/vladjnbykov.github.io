@@ -10,39 +10,83 @@ html {
   background-size: cover;
 }
 
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+.text-uppercase {
+	text-align: center;
+	color: blue;
+}
+
 h1 {
+	text-align: center;
 	font-size: 3rem;
 	color: #e2dbdb;
 }
 
 hr {
-	border-color: #F05F44;
-	border-width: 3px;
-	max-width: 65px;
+	border-color: #1E00F9;
+	border-width: 4px;
+	max-width: 365px;
 }
 
 .buffer {
-	height: 20rem;
+	height: 25rem;
 }
 
 .btn {
-	font-weight: 700;
-	border-radius: 300px;
+	font-weight: 600;
+	border-radius: 200px;
 	text-transform: uppercase;
 }
 
-.btn-primary {
-	background-color: #F05F44;
-	border-color: #F05F44;
+.btn-subscribe {
+	background-color: #FF6464;
+	border-color: #1C10AF;
 
 }
 
-.btn-primary:hover {
-	background-color: #ee4b08;
-	border-color: #ee4b08;
+
+.btn-ocean {
+	background-color: #727DFF;
+	border-color: #1C10AF;
+
+}
+
+
+.btn-world {
+	background-color: #44CF6E;
+	border-color: #1C10AF;
+
+}
+
+
+.btn-data {
+	background-color: #FB92CB;
+	border-color: #1C10AF;
+
+}
+
+
+.btn-graphics {
+	background-color: #F8FE53;
+	border-color: #1C10AF;
+
+}
+
+
+.btn-author {
+	background-color: #4DE39B;
+	border-color: #1C10AF;
+
+}
+
+
+.btn:hover {
+	background-color: #FF9038;
+	border-color: #FF9038;
 	border-width: 4px;
 }
 
-.btn-xl {
-	padding: 1rem 2rem;
-}
