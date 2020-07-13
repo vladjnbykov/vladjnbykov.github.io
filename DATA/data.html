@@ -1,30 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
 	<title>Data Analysis</title>
 
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    	<!-- Google Fonts -->
+    	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-    <!-- Bootstrap CSS from a CDN. This way you don't have to include the bootstrap file yourself -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    	<!-- Bootstrap CSS from a CDN. This way you don't have to include the bootstrap file yourself -->
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
-    <link rel="stylesheet" type="text/css" href="data_style.css">
+    	<link rel="stylesheet" type="text/css" href="data_style.css">
 
-</head>
-<body>
-	<div class="container d-flex align-items-center h-100">
-        <div class="row">
-          <header class="text-center col-12">
-           <h1 class="text-uppercase"><strong>Tools for Data Analysis</strong></h1>
-          </header>
-          <div class="buffer col-12"></div>
+  </head>
+  
+  <body>
 
-          <section class="text-center col-12">
+	<div class="container d-flex align-items-center h-90">
 
-</body>
+    	<div class="row">
+
+		 <header class="text-center col-12">
+
+				<h1 class="text-uppercase"><strong>Tools for Data Analysis</strong></h1>
+				<hr>
+				<br>
+		 </header>
+    
+	<h3 class= "topic"><strong>Growth curve data analysis</strong></h3>
+	<br>
+    <p class= "raw-text">
+    	Estimation of populations’ growth is a significant part of research in many fields of biology. This is particularly important in experimental medicine, experimental oncology and drug development. Finding a substance which can specifically destroy or hamper growth of cancer cells while leaving intact normal cells is a primary goal of anti-cancer drug development. This task is extremely complicated since normal and tumour cells are actually quite similar thus resulting in substantial side effects of any anti-cancer treatment. Identifying such substances is done by a number of ways but eventually all successful candidates would need to be tested in a cellular system which model a real situation and will allow to perform a preliminary estimation of specific and non-specific effect of the treatment.
+    	<br>
+    	<br>
+		Thus, we are coming to the analysis of cell growth under control conditions and under treatment. Classical way is to treat cell lines with a test substance at different concentrations for 2-3 days and by the end of experiment estimate a number of living cells in the control and treated samples. This give a snapshot of the cell cultures at the endpoint of the experiment. However, such approach misses a lot of valuable information, such as time when changes started to happen in cell culture, whether cells recover after initial impact of the experimental compound and how fast they do it. It will give important information about drug metabolism, emergence of the resistant clones or adaptation of cells to the treatment by deploying the detoxification system which includes drug oxidation, hydroxylation, conjugation, excretion or by activating repair systems, such as DNA repair or other stress adaptive responses helping cells to survive.
+		<br> 
+		<br>
+		Analysis of the growth curves is a complicated mathematical task. We are dealing here with non-linear dependency between time and population density/ cell number/ cell confluency. This relationship is usually described by logistic regression model which is regarded as a good fit to S-shape of the data which comprises in our case lag-phase (cells are adapting to the new conditions after subculture into a new vessel), log-phase (cells are in the exponential growth phase) and stationary phase (culture becomes stabilized due to confluency or lack of nutrients). The full set of data gives information about population doubling time at different stages of the culture, maximum population doubling time, comparison between cultures when population growth reaches it maximum in the control untreated cultures, speed of growth in terms of changes in the confluency or cell number per hour, maximum growth rate, time when the cell growth reaches its maximum etc.
+	</p>    	
+
+
+<h4 class= "topic"><strong>IncuCyte</strong></h4>
+
+	<p class="raw-text">
+		Live imaging technology through a time-lapse photography enables us to estimate conditions of the cell cultures at any point during the experiment. The popular equipment in cell biology to achieve this goal at the present moment is IncuCyte. It provides series of time-lapse phase-contrast and several fluorescent channels images.  
+	</p>
+
+<h5 class= "topic"><strong><em>Confluency/ cell number</em></strong></h5>
+	<p class="raw-text">
+		Click on the image will take you to the application I have developed for cell growth curves analysis. The app is written in R Shiny code and it is free to use. Data preparation is described in the application. 
+		<br>
+		
+
+		<div class ="img-container">
+		 <a href="https://vladjnbykov.shinyapps.io/IncuCyte_confluency/?_ga=2.222728475.1498982301.1594632249-948149207.1574950218"><img src= "growth_curves1.png" width="286px" height ="426px"></a>
+		   <p class ="img-wrap"><strong><em>The parameters I recommend to use for data description and comparison:</em></strong>
+		   		<br>
+		   		<br><strong>Rate_cp_ctrl: </strong> cell growth rate at the time when growth rate of the control population reaches its maximum (cp). I suggest to use this parameter. 
+		   		
+		   		<br><strong>Net.change: </strong>a change in cell confluency over time as estimated based on the regression model 
+		   		
+				<br><strong>Cp: </strong>critical point, time(h) when cell growth reaches its maximum rate 
+				
+				<br><strong>Max.rate: </strong>maximum rate of cell growth (expressed as % confluency /h) 
+				
+				<br><strong>Max.DT: </strong>maximum population doubling time (h)
+		   </p>
+		</div>
+
+
+		<div class="buffer col-12"></div>
+		
+<h5 class= "topic"><strong><em>Fluorescent signal</em></strong></h5>
+	<p class="raw-text">
+		Here is the link to the application I have developed to analyse induction of a fluorescence signal over time. The app is written in R Shiny code and it is free to use. Data preparation is described inside of the application.
+		The estimation of AUC, area under curve, is done by a spline function model. AUC is an integral estimation of cellular exposure to the measured signal over time. Here it is expressed in (fluorescent signal /confluency) x time.
+		<br>
+		<strong><em>The estimated parameters:</em></strong>
+		<br><strong>AUC_exp_final: </strong>Area under curve estimated according to the spline fitting function
+		<br><strong>Net.change.final: </strong>a change over observation time in fluorescence signal corrected for cell confluency. 
+	</p>	
+
+<h4 class= "topic"><strong>IC50 estimation</strong></h4>
+
+
+
+
+
+
+		</div>
+			</div>
+
+
+  </body>
 </html>
