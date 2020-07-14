@@ -27,6 +27,7 @@ img {
 
 .img-wrap { 
     margin: 0 0 0 10px; 
+    text-align: justify;
 }
 
 
@@ -42,7 +43,7 @@ img {
   color: darkblue;
 }
 .buffer {
-  height: 2rem;
+  height: 3rem;
 }
 
 .raw-text {

@@ -44,14 +44,18 @@
 
 
 <h4 class= "topic"><strong>IncuCyte</strong></h4>
-
-	<p class="raw-text">
-		Live imaging technology through a time-lapse photography enables us to estimate conditions of the cell cultures at any point during the experiment. The popular equipment in cell biology to achieve this goal at the present moment is IncuCyte. It provides series of time-lapse phase-contrast and several fluorescent channels images.  
+	<div class ="img-container">
+		 <a href="https://www.sartorius.com/en/products/cell-analysis/incucyte-live-cell-analysis-system"><img src= "incucyte.jpg" width="460px" height ="259px"></a>
+		   <p class ="img-wrap">
+			Live imaging technology through a time-lapse photography enables us to estimate conditions of the cell cultures at any point during the experiment. The popular equipment in cell biology to achieve this goal at the present moment is IncuCyte. It provides series of time-lapse phase-contrast and several fluorescent channels images.  
 	</p>
+</div>
+<div class="buffer col-12"></div>
 
 <h5 class= "topic"><strong><em>Confluency/ cell number</em></strong></h5>
 	<p class="raw-text">
 		Click on the image will take you to the application I have developed for cell growth curves analysis. The app is written in R Shiny code and it is free to use. Data preparation is described in the application. 
+	</p>
 		<br>
 		
 
@@ -75,25 +79,36 @@
 		<div class="buffer col-12"></div>
 		
 <h5 class= "topic"><strong><em>Fluorescent signal</em></strong></h5>
+
 	<p class="raw-text">
-		Here is the link to the application I have developed to analyse induction of a fluorescence signal over time. The app is written in R Shiny code and it is free to use. Data preparation is described inside of the application.
+		Click on the image will take you to the application I have developed to analyse induction of a fluorescence signal over time. The app is written in R Shiny code and it is free to use. Data preparation is described inside of the application.
 		The estimation of AUC, area under curve, is done by a spline function model. AUC is an integral estimation of cellular exposure to the measured signal over time. Here it is expressed in (fluorescent signal /confluency) x time.
-		<br>
-		<strong><em>The estimated parameters:</em></strong>
-		<br><strong>AUC_exp_final: </strong>Area under curve estimated according to the spline fitting function
-		<br><strong>Net.change.final: </strong>a change over observation time in fluorescence signal corrected for cell confluency. 
-	</p>	
-
-<h4 class= "topic"><strong>IC50 estimation</strong></h4>
-
-
-
-
-
-
+	</p>
+	<br>
+		<div class ="img-container">
+			<a href="https://vladjnbykov.shinyapps.io/incu_color_confl/?_ga=2.17217849.1498982301.1594632249-948149207.1574950218"><img src= "fluor_confl_curves.jpg" width="282px" height ="244px"></a>
+				<p class="img-wrap">
+					<strong><em>The estimated parameters:</em></strong>
+					<br>
+					<br><strong>AUC_exp_final: </strong>Area under curve estimated according to the spline fitting function
+					<br><strong>Net.change.final: </strong>a change over observation time in fluorescence signal corrected for cell confluency. 
+				</p>	
 		</div>
-			</div>
+<div class="buffer col-12"></div>
+<h4 class= "topic"><strong>IC50 estimation</strong></h4>
+	<p class="raw-text">
+		Estimation of growth properties of tumour cells is essential part of drug development in oncology. The IC50, a concentration of the experimental substance which inhibit cell growth by 50%, is the most widely used parameter in this field of research. Click on the image will take you to the application I wrote in R Shiny. The app takes raw data in Excel format and either automatically calculates IC50 values or enable a user to interactively examine the graphical data of growth suppression curve. Data preparation is described inside the application. 
+	</p>
 
+	<br>
+		<div class ="img-container">
+			<a href="https://vladjnbykov.shinyapps.io/IC50/?_ga=2.219583897.1498982301.1594632249-948149207.1574950218"><img src= "gc_graph_ic50.png" width="375px" height ="262px"></a>
+				<p class="img-wrap">
+					<strong><em>The estimated parameters:</em></strong>
+					<br>
+					<br><strong>IC50</strong> 
+				</p>	
+		</div>
 
   </body>
 </html>
