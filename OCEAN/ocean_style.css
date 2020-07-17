@@ -1,0 +1,70 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+	
+  display: flex;
+	justify-content: center;
+}
+
+.img-container {
+    max-width: 1500px;
+    display: flex;
+}
+
+img {
+    align-self: baseline;
+    margin: 5px;
+    
+}
+
+.img-wrap { 
+    margin: 0 0 0 10px; 
+    text-align: justify;
+}
+
+.text-uppercase {
+  text-align: center;
+  position: relative;
+  top: 5px;
+  color: blue;
+}
+
+.topic {
+  text-align: left;
+  color: darkblue;
+}
+
+.subtopic {
+  text-align: left;
+  color: darkblue;
+  font-size: 18px
+}
+
+.buffer {
+  height: 2rem;
+}
+
+.buffer-mini{
+  height: 1rem;
+}
+
+.raw-text {
+  text-align: justify;
+}
+
+body {
+    background-color: #d1d5ff;
+    margin-top: 0px;
+    
+  }
+
+
