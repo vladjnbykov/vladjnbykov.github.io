@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html,
 body {
   width: 100%;
@@ -57,3 +58,64 @@ body {
   }
 
 
+=======
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+	
+  display: flex;
+	justify-content: center;
+}
+
+.img-container {
+    max-width: 1500px;
+    display: flex;
+}
+
+img {
+    align-self: baseline;
+    
+}
+
+.img-wrap { 
+    margin: 0 0 0 10px; 
+    text-align: justify;
+}
+
+
+.text-uppercase {
+  text-align: center;
+  position: relative;
+  top: 5px;
+  color: blue;
+}
+
+.topic {
+  text-align: left;
+  color: darkblue;
+}
+.buffer {
+  height: 3rem;
+}
+
+.raw-text {
+  text-align: justify;
+}
+
+body {
+    background-color: #f7d4f7;
+    margin-top: 0px;
+    
+  }
+
+
+>>>>>>> 8147f9982c6d6b51d6c4f829cb46abcf1987d7a9
