@@ -3,7 +3,7 @@ html {
   width: 100%;
   height: 100%;
   font-family: 'Montserrat', sans-serif;
-  background: url(header.jpg) no-repeat center center fixed; 
+  background: url(header_m.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -16,8 +16,11 @@ html {
 }
 
 .text-uppercase {
+	font-family: "Rye";
+	font-size: 4rem;
 	text-align: center;
 	color: blue;
+
 }
 
 h1 {
@@ -28,12 +31,12 @@ h1 {
 
 hr {
 	border-color: #1E00F9;
-	border-width: 4px;
+	border-width: 3px;
 	max-width: 365px;
 }
 
 .buffer {
-	height: 25rem;
+	height: 35rem;
 }
 
 .btn {
